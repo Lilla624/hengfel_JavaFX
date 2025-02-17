@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.SolutionController">
+   <children>
+      <TableView fx:id="table" layoutX="106.0" layoutY="102.0" onMouseClicked="#onMouseClickedTable" prefHeight="198.0" prefWidth="375.0">
+        <columns>
+          <TableColumn fx:id="idCol" prefWidth="59.99993896484375" text="#" />
+          <TableColumn fx:id="radiusCol" prefWidth="100.66671752929688" text="Sugár (r)" />
+            <TableColumn fx:id="lengthCol" prefWidth="102.6666259765625" text="Hosszúság (h)" />
+            <TableColumn fx:id="surfaceCol" prefWidth="114.66668701171875" text="Felszín (A)" />
+        </columns>
+      </TableView>
+      <Button layoutX="268.0" layoutY="43.0" mnemonicParsing="false" onAction="#onClickBackButton" text="Vissza" />
+   </children>
+</Pane>

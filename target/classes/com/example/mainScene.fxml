@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Ellipse?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.MainController">
+   <children>
+      <Button layoutX="275.0" layoutY="200.0" mnemonicParsing="false" onAction="#onClickCalcButton" text="Számít" />
+      <Label layoutX="171.0" layoutY="44.0" text="Henger felszínének számítása">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="radiusField" layoutX="226.0" layoutY="111.0" />
+      <TextField fx:id="lengthField" layoutX="226.0" layoutY="155.0" />
+      <TextField fx:id="surfaceField" layoutX="226.0" layoutY="256.0" />
+      <Label layoutX="151.0" layoutY="115.0" text="Sugár (r)" />
+      <Label layoutX="134.0" layoutY="159.0" text="Hosszúság (h)" />
+      <Label layoutX="147.0" layoutY="260.0" text="Felszín (A)" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="138.0" layoutX="431.0" layoutY="176.0" stroke="BLACK" strokeType="INSIDE" width="103.0" />
+      <Ellipse fill="DODGERBLUE" layoutX="482.0" layoutY="176.0" radiusX="52.0" radiusY="28.0" stroke="BLACK" strokeType="INSIDE" />
+      <Ellipse fill="DODGERBLUE" layoutX="483.0" layoutY="314.0" radiusX="52.0" radiusY="28.0" stroke="BLACK" strokeType="INSIDE" />
+      <Button layoutX="273.0" layoutY="314.0" mnemonicParsing="false" onAction="#onClickSaveButton" text="Mentés" />
+      <Button layoutX="14.0" layoutY="19.0" mnemonicParsing="false" onAction="#onClickAboutButton" text="Névjegy" />
+      <Button layoutX="532.0" layoutY="19.0" mnemonicParsing="false" onAction="#onClickExitButton" text="Kilépés" />
+   </children>
+</Pane>
