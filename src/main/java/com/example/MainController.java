@@ -1,5 +1,9 @@
 package com.example;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -54,5 +58,24 @@ public class MainController {
     @FXML
     void onClickSaveButton(ActionEvent event) {
         App.setRoot("solutionScene");
-    }    
+        String sql = "INSERT INTO cylinders (radius, length, surface) VALUES (?, ?, ?)";
+
+        try (Connection conn = DataSource.getConnection();
+             PreparedStatement ps = conn.prepareStatement(sql)) {
+
+            ps.setDouble(1, Double.parseDouble(radiusField.getText()));
+            ps.setDouble(2, Double.parseDouble(lengthField.getText()));
+            ps.setDouble(3, Double.parseDouble(surfaceField.getText()));
+
+            ps.executeUpdate();
+            System.out.println("Adatok sikeresen elmentve!");
+
+            App.setRoot("solutionScene");
+
+        } catch (SQLException e) {
+            System.out.println("Adatbázis hiba: " + e.getMessage());
+        } catch (NumberFormatException e) {
+            System.out.println("Hibás formátum! Kérlek, csak számokat írj be.");
+        }
+    }  
 }
