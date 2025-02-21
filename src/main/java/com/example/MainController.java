@@ -70,8 +70,6 @@ public class MainController {
             ps.executeUpdate();
             System.out.println("Adatok sikeresen elmentve!");
 
-            App.setRoot("solutionScene");
-
         } catch (SQLException e) {
             System.out.println("Adatbázis hiba: " + e.getMessage());
         } catch (NumberFormatException e) {

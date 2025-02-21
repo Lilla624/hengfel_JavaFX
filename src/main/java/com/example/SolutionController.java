@@ -2,8 +2,6 @@ package com.example;
 
 import java.util.ArrayList;
 
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TableColumn;
@@ -56,9 +54,9 @@ public class SolutionController {
         this.lengthCol.setCellValueFactory(new PropertyValueFactory<>("length"));
         this.surfaceCol.setCellValueFactory(new PropertyValueFactory<>("surface"));
 
-        ObservableList<Henger> hengerek = 
-            FXCollections.observableArrayList(hengerList);
-        this.table.getItems().addAll(hengerek);
+        // ObservableList<Henger> hengerek = 
+        //     FXCollections.observableArrayList(hengerList);
+        // this.table.getItems().addAll(hengerek);
     }
 
 }
